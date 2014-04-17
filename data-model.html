@@ -1,0 +1,133 @@
+<html>
+<meta charset="utf-8"> 
+<head>
+	<title>OpenStreetMap Georgia</title>
+	
+	<style>
+	body {
+		width:800px; margin-left:auto; margin-right:auto;
+	}
+	#body-top{
+		width:600px; margin-left:auto; margin-right:auto;
+	}
+	table, th, td {
+		font-size: 0.9em;
+		border-collapse:collapse;
+		border: 1px solid black;
+		padding: 5px;
+	}
+
+	tr:nth-child(odd) {
+	    background-color: #fed;
+	}
+	
+	tr:nth-child(even) {
+	    background-color: #def;
+	}
+	</style>
+	
+</head>
+<body>
+
+<div id="body-top">
+<center>
+<h1>Data Model</h1>
+</center>
+<hr>
+<p>The purpose of this data model is for us to have a shared idea of the features and attributes we should collect. Different people like to map different things, and of course you are free to map whatever you want. But hopefully we can make a list of all the features that we'd like to have and we can agree to collect together.</p>
+
+<p>For anyone taking a part of Tbilisi (or elsewhere) on the <a href="progress-map.html">progress map</a>, you should refer to this data model for a list of things that should be collected.</p>
+
+<p>If you'd like to suggest adding (or removing) something, please let's discuss it on the <a target="blank" href="https://www.facebook.com/groups/osmgeorgia/">OSM Georgia Facebook</a> group.
+
+<hr>
+</div>
+
+<h3>Roads</h3>
+<table>
+	<tr>
+		<td><h2>attribute</h2></td>
+		<td><h2>tags</h2></td>
+		<td><h2>notes</h2></td>
+	</tr>
+	<tr>
+		<td>road type</td>
+		<td>highway=motorway | primary | secondary | residential | service</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>name</td>
+		<td>name, name:en, name:ka (name:ru would be nice too but not necessary)</td>
+		<td>At the moment we have agreed that the format for the name field should be "Name in Georgian (Name in English)". For example, "<code>name=ბარნოვის ქუჩა (Barnovi Street)</code>". Please spell out Street, Avenue, ქუჩა, გამზირი, and others. This is the correct method as computers can easily abbreviate these, but it is harder to convert "St." to "Street"</td>
+	</tr>
+	<tr>
+		<td>surface type</td>
+		<td>surface=asphalt | cobblestone | unpaved | concrete</td>
+		<td>There are different ways of defining surface type but we should agree on this. Should we do a simple paved|unpaved or should we include the various other types ie. brick, concrete, cobblestone?</td>
+	</tr>
+	<tr>
+		<td>width (nice but maybe not necessary)</td>
+		<td>width=(number in meters)</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>oneway</td>
+		<td>oneway=yes | no</td>
+		<td>One way streets should ALWAYS be marked oneway=yes. It can also be good to mark two-way streets oneway=no, so that we know that someone has looked at the street and determined it is not oneway, rather than nobody having looked at it at all.</td>
+	</tr>
+
+</table>
+
+<h3>Buildings</h3>
+<table>
+	<tr>
+		<td><h2>attribute</h2></td>
+		<td><h2>tags</h2></td>
+		<td><h2>notes</h2></td>
+	</tr>
+	<tr>
+		<td>identify as building</td>
+		<td>building=yes</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>number of floors</td>
+		<td>building:levels=(number of stories)</td>
+		<td>building:height is also good.  The value should be given in meters. Having one (or both) of these tags is great for 3d rendering programs.</td>
+	</tr>
+	<tr>
+		<td>address</td>
+		<td>Each building should have addr:housenumber and addr:street assigned.</td>
+		<td>I think we also need addr:housenumber:en in SOME cases. For example when a building number is 11ა, there should be another tag which says <code>addr:housenumber=11a</code>. I'm not sure but we should probably also have addr:street:en and addr:street:ka</td>
+	</tr>
+</table>
+
+<h3>POIs</h3>
+When it comes to POIs, I think we should just add as many as possible. Of course some POIs may be more important than others, like a school is more significant than a small kiosk, but there's no reason not to map them both. Remember to add tags for
+
+<ul>
+	<li>name - format is "Georgian Name (English Name)"</li>
+	<li>name:ka</li>
+	<li>name:en</li>
+</ul>
+
+Sometimes places have only an English name or only a Georgian name. My idea is to always use the name:ka field, even if the name is in English letters. If something has no English name, then leave name:en empty.
+
+So for example, McDonald's would be:</br>
+<code>
+	name=McDonald's</br>
+	name:ka=McDonald's</br>
+	name:en=McDonald's</br>
+</code>
+
+</br>And a "Vulcanizatsia" would be:</br>
+<code>
+	name=ვულკანიზაცია</br>
+	name:ka=ვულკანიზაცია</br>
+</code>
+</br>with no name:en tag.
+	
+</br></br></br></br></br>
+
+</body>
+</html>
