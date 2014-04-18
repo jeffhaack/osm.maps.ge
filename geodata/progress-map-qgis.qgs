@@ -4,10 +4,10 @@
     <mapcanvas>
         <units>meters</units>
         <extent>
-            <xmin>4981572.31219417136162519</xmin>
-            <ymin>5115999.12781122513115406</ymin>
-            <xmax>4989000.97651464026421309</xmax>
-            <ymax>5120691.57792390137910843</ymax>
+            <xmin>4982356.43774054851382971</xmin>
+            <ymin>5116764.28611786384135485</ymin>
+            <xmax>4989894.13306153286248446</xmax>
+            <ymax>5121525.60763306636363268</ymax>
         </extent>
         <projections>1</projections>
         <destinationsrs>
@@ -38,7 +38,7 @@
     <projectlayers layercount="2">
         <maplayer minimumScale="0" maximumScale="1e+08" ol_layer_type="4" type="plugin" hasScaleBasedVisibilityFlag="0" name="openlayers">
             <id>OpenLayers_plugin_layer20140417094818832</id>
-            <datasource></datasource>
+            <datasource>.</datasource>
             <title></title>
             <abstract></abstract>
             <keywordList>
@@ -253,9 +253,9 @@
                 <edittype labelontop="0" editable="1" type="0" name="roads"/>
                 <edittype labelontop="0" editable="1" type="0" name="user"/>
             </edittypes>
-            <editform></editform>
+            <editform>.</editform>
             <editforminit></editforminit>
-            <annotationform></annotationform>
+            <annotationform>.</annotationform>
             <editorlayout>generatedlayout</editorlayout>
             <excludeAttributesWMS/>
             <excludeAttributesWFS/>
